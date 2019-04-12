@@ -1,0 +1,36 @@
+{
+  "name": "ultima-thule",
+  "version": "1.0.0",
+  "description": "JS sandbox",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patoi/ultima-thule.git"
+  },
+  "keywords": [
+    "pattern",
+    "javascript",
+    "type",
+    "class"
+  ],
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "lib": ["es6"],
+    "allowJs": true,
+    "checkJs": true
+  },
+  "author": "Istvan Pato <istvan.pato@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/patoi/ultima-thule/issues"
+  },
+  "homepage": "https://github.com/patoi/ultima-thule#readme",
+  "devDependencies": {
+    "standard": "^12.0.1",
+    "typescript": "^3.4.3"
+  }
+}
