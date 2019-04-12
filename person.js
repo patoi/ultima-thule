@@ -1,4 +1,3 @@
-// @ts-check
 class Person {
     /**
      * Representing a person with name and age.

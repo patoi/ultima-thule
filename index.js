@@ -1,4 +1,3 @@
-// @ts-check
 const Person = require('./person')
 
 const jim = new Person({ name: 'Jim Beam', age: 20 })
