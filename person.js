@@ -2,9 +2,7 @@
 class Person {
   /**
    * Person class constructor.
-   * @typedef {Object<string, number>} Person
-   * @param {!string} name person name, 1-30 chars, required
-   * @param {number} age person age, integer, 0-150 year, default is 0
+   * @param {{name: !string, age: number]} person name and age data
    * @throws {TypeError}
    * @throws {RangeError}
    * @example
