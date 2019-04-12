@@ -17,4 +17,4 @@ Optionally, you can turn on checking feature to all files:
 "javascript.implicitProjectConfig.checkJs": true
 ```
 
-![VS Code validation based on JSDoc](https://patoi.github.com/images/vscode_jsdoc_1.png)
+![VS Code validation based on JSDoc](https://raw.githubusercontent.com/patoi/ultima-thule/master/vscode_jsdoc_1.png)
