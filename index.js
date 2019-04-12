@@ -2,14 +2,19 @@
 const Person = require('./person')
 
 const jim = new Person({ name: 'Jim Beam', age: 20 })
-const john = new Person('John Doe')
+const john = new Person({ name: 'John Doe', age: 50 })
+
 // TypeError: const jane = new Person('', 20)
 // TypeError: const jane = new Person('Jane Doe', 'hi')
 // TypeError: const jane = new Person('Jane Doe', -6)
 // TypeError: const jane = new Person('Jane Doe', 19.4)
 // RangeError: const jane = new Person('Jane Doe', 151)
 
-const jane = new Person({ name: 'Jane Doe', age: 'hi' })
+// Wrong type!
+const jane = new Person({
+    name: 'Jane Doe',
+    age: '10',
+})
 
 console.log(jim)
 console.log(john)
