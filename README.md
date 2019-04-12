@@ -18,7 +18,7 @@ Optionally, you can turn on checking feature to all files:
 "javascript.implicitProjectConfig.checkJs": true
 ```
 
-**JSDoc support in JavaScript:**
+**JSDoc support in VS Code:**
 
 -   https://github.com/Microsoft/TypeScript/wiki/JsDoc-support-in-JavaScript
 -   https://github.com/Microsoft/TypeScript/wiki/JavaScript-Language-Service-in-Visual-Studio#JsDoc
