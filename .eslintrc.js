@@ -12,7 +12,9 @@ module.exports = {
     parserOptions: {
         ecmaVersion: 2018,
     },
+    plugins: ['no-null'],
     rules: {
         'no-console': 'off',
+        'no-null/no-null': 2,
     },
 }

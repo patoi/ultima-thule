@@ -44,7 +44,7 @@ console.log(TriState.FALSE)
 
 /**
  * @typedef {Object} SpecialType - creates a new type named 'SpecialType'
- * @property {string} prop1 - a string property of SpecialType
+ * @property {!string} prop1 - a string property of SpecialType
  * @property {number} prop2 - a number property of SpecialType
  * @property {number=} prop3 - an optional number property of SpecialType
  * @prop {number} [prop4] - an optional number property of SpecialType
@@ -55,6 +55,13 @@ console.log(TriState.FALSE)
 let specialTypeObject
 // error: unknown property
 specialTypeObject.prop9 = 10
+
+/**
+ * Do not use null, read more: 
+ * https://medium.com/@hbarcelos/why-i-banned-null-from-my-js-code-and-why-you-should-too-13df90323cfa
+ * Settings eslint plugin: 'no-null'
+ */
+specialTypeObject.prop1 = null
 
 /**
  * Type definition by JSDoc example.
