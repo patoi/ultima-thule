@@ -57,7 +57,7 @@ let specialTypeObject
 specialTypeObject.prop9 = 10
 
 /**
- * Do not use null, read more: 
+ * Do not use null, read more:
  * https://medium.com/@hbarcelos/why-i-banned-null-from-my-js-code-and-why-you-should-too-13df90323cfa
  * Settings eslint plugin: 'no-null'
  */

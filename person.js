@@ -1,9 +1,9 @@
 class Person {
     /**
      * Representing a person with name and age.
-     * @param {object} Person person object
-     * @param {!string} Person.name required, length must be in 1-30
-     * @param {number=} Person.age optional, must be between 0-150, default is 0
+     * @param {object} Person Person object.
+     * @param {!string} Person.name Required, length must be in 1-30.
+     * @param {number=} Person.age Optional, must be between 0-150, default is 0.
      * @throws {TypeError|RangeError}
      * @example
      * const jim = new Person({ name: 'Jim Beam', age: 20 })
@@ -19,10 +19,10 @@ class Person {
 
     /**
      * Person name validation.
-     * @param {!string} name person name
+     * @param {!string} name Person name.
      * @throws {TypeError}
      * @throws {RangeError}
-     * @returns {boolean} true if valid
+     * @returns {boolean} True, if valid.
      */
     static isValidName(name) {
         if (!name) {
@@ -37,10 +37,10 @@ class Person {
 
     /**
      * Person age validation.
-     * @param {!number} age person age
+     * @param {!number} age Person age.
      * @throws {TypeError}
      * @throws {RangeError}
-     * @returns {boolean} true if valid
+     * @returns {boolean} True, if valid.
      */
     static isValidAge(age) {
         if (!Number.isInteger(age)) {
