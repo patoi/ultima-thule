@@ -6,6 +6,7 @@
     "main": "index.js",
     "scripts": {
         "start": "node index.js",
+        "lint": " eslint -c ./.eslintrc.js --fix-dry-run ./*.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
