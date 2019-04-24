@@ -1,33 +1,51 @@
+'use strict'
 const Person = require('./person')
 
 const jim = new Person({ name: 'Jim Beam', age: 20 })
 const john = new Person({ name: 'John Doe', age: 50 })
 
-// TypeError: const jane = new Person('', 20)
-// TypeError: const jane = new Person('Jane Doe', 'hi')
-// TypeError: const jane = new Person('Jane Doe', -6)
-// TypeError: const jane = new Person('Jane Doe', 19.4)
-// RangeError: const jane = new Person('Jane Doe', 151)
+// TypeError: name is required
+//new Person({ name: '', age: 20 })
 
-// error: property type mismatch
-const jane = new Person({
-    name: 'Jane Doe',
-    age: '10',
-})
+// TypeError: age must be an integer number
+//new Person({ name: 'Jane Doe', age: 'hi' })
 
-console.log(jim)
-console.log(john)
-console.log(jane)
-console.log(john.name)
+// RangeError: age interval must be in 0-150
+//new Person({ name: 'Jane Doe', age: -6 })
+
+// TypeError: age must be an integer number
+//new Person({ name: 'Jane Doe', age: 19.4 })
+
+// RangeError: age interval must be in 0-150
+//new Person({ name: 'Jane Doe', age: 151 })
+
+/**
+ * NOTE: direct field setting is wrong, use immutable objects: always use constructor!
+ * Do not use: jim.name = 'Elon Musk'
+ *
+ * You need to set 'use strict' mode! There is no TypeError without it.
+ * TypeError: Cannot assign to read only property 'name' of object '#<Person>'
+ */
+//jim.name = 'Elon Musk'
+
+// VS Code error: property type mismatch
+// const jane = new Person({
+//     name: 'Jane Doe',
+//     age: '10',
+// })
+
+// VS Code error: property does not exist
+//jim.hello = 5
+
+console.log('jim.toString() = ', jim.toString())
+console.log('john.toString() = ', john.toString())
+console.log('john.name = ', john.name)
 
 // using class validators
 const isValidAge = Person.isValidAge(10)
 const isValidName = Person.isValidName('Jimmy Lee-Curtis')
 
-console.log(isValidAge, isValidName)
-
-// NOTE: direct setting is wrong, use immutable objects, use constructor!
-// do not use: john.name = 'Jimmy Jones'
+console.log({ isValidAge, isValidName })
 
 /**
  * Enum for tri-state values.
@@ -40,7 +58,7 @@ const TriState = {
 }
 
 // code completition example
-console.log(TriState.FALSE)
+console.log('TriState.FALSE = ', TriState.FALSE)
 
 /**
  * @typedef {Object} SpecialType - creates a new type named 'SpecialType'
@@ -52,22 +70,14 @@ console.log(TriState.FALSE)
  */
 
 /** @type {SpecialType} */
-let specialTypeObject
-// error: unknown property
-specialTypeObject.prop9 = 10
+let specialTypeObject = {}
+// VS Code error: unknown property
+//specialTypeObject.unknownProperty = 10
 
 /**
  * Do not use null, read more:
  * https://medium.com/@hbarcelos/why-i-banned-null-from-my-js-code-and-why-you-should-too-13df90323cfa
  * Settings eslint plugin: 'no-null'
  */
-specialTypeObject.prop1 = null
-
-/**
- * Type definition by JSDoc example.
- * @type {Person}
- */
-let harry
-// error: type mismatch
-harry = 10
-console.log(harry.age)
+// VS Code and linter error: use undefined instead of null
+//specialTypeObject.prop1 = null

@@ -14,6 +14,7 @@ module.exports = {
     },
     plugins: ['no-null', 'jsdoc', 'prettier'],
     rules: {
+        'strict': ["error", "global"],
         'prettier/prettier': 'error',
         'no-console': 'off',
         'no-null/no-null': 2,
@@ -23,7 +24,7 @@ module.exports = {
         'jsdoc/newline-after-description': 0,
         'jsdoc/require-description-complete-sentence': 1,
         'jsdoc/require-example': 0,
-        'jsdoc/require-hyphen-before-param-description': 1,
+        'jsdoc/require-hyphen-before-param-description': 0,
         'jsdoc/require-param': 1,
         'jsdoc/require-param-description': 1,
         'jsdoc/require-param-name': 1,

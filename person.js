@@ -1,7 +1,8 @@
+'use strict'
 class Person {
     /**
      * Representing a person with name and age.
-     * @param {object} Person Person object.
+     * @param {Object} Person Person object.
      * @param {!string} Person.name Required, length must be in 1-30.
      * @param {number=} Person.age Optional, must be between 0-150, default is 0.
      * @throws {TypeError|RangeError}
@@ -15,11 +16,21 @@ class Person {
         Person.isValidAge(age)
         this.name = name
         this.age = age
+        // immutable object
+        Object.freeze(this)
+    }
+
+    /**
+     * JSON representation.
+     * @returns {string} JSON string.
+     */
+    toString() {
+        return JSON.stringify(this)
     }
 
     /**
      * Person name validation.
-     * @param {!string} name Person name.
+     * @param {!string} name - Person name.
      * @throws {TypeError}
      * @throws {RangeError}
      * @returns {boolean} True, if valid.
