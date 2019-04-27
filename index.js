@@ -70,7 +70,7 @@ console.log('TriState.FALSE = ', TriState.FALSE)
  */
 
 /** @type {SpecialType} */
-let specialTypeObject = {}
+//let specialTypeObject = {}
 // VS Code error: unknown property
 //specialTypeObject.unknownProperty = 10
 
