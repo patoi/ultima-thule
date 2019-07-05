@@ -45,3 +45,4 @@ VS Code shows a message about this error:
 4. line: `person.js(6, 8): The expected type comes from property 'age' which is declared here on type '{ name: string; age?: number; }'` – detailed error description: you can click on person.js for more information
 
 ![VS Code validation based on JSDoc](https://raw.githubusercontent.com/patoi/ultima-thule/master/vscode_jsdoc_1.png)
+
