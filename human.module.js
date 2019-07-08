@@ -1,10 +1,11 @@
 'use strict'
 /**
  * Human.
- * @param {number} iq The IQ.
- * @param {string} name Peron's name.
+ * @param {object} Human Human data.
+ * @param {number} Human.iq The IQ.
+ * @param {string} Human.name Peron's name.
  */
-module.exports = function(iq, name) {
+module.exports = ({ iq, name }) => {
     const _type = 'HUMAN'
     let _name = name
     let _iq = iq
