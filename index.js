@@ -81,3 +81,15 @@ console.log('TriState.FALSE = ', TriState.FALSE)
  */
 // VS Code and linter error: use undefined instead of null
 //specialTypeObject.prop1 = null
+let c = 0
+
+const Car = require('./car')
+let ferrari = new Car(11770, 2)
+console.log(ferrari.getPassengersNum())
+
+const Human = require('./human.module')
+const Jim = Human(100, 'Jim')
+const John = Human(200, 'John')
+console.log('Jim IQ level:', Jim.getIQLevel())
+console.log('John IQ level:', John.getIQLevel())
+console.log('Jim type: ', Jim.getType())
